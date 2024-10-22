@@ -59,15 +59,7 @@ function Editor({ id, isLoading }) {
     setLoading(false);
   }, []);
 
-  return (
-    <LoadingAnimation
-      id={id}
-      isLoading={isLoading}
-      delayTime={2000}
-      timeoutTime={7000}
-      heightMultiplier={2}
-    />;
-  )
+  return <LoadingAnimation id={id} isLoading={isLoading} delayTime={2000} timeoutTime={7000} heightMultiplier={2} />;
 }
 ```
 
