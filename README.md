@@ -1,12 +1,29 @@
 # Carbon.NeosUi.LoadingAnimation
 
-https://github.com/user-attachments/assets/3af20265-5254-4a22-ba53-0e57dc24a36c
-
 It’s important that users understand that things are happening when they have to wait for something. This loading timer
 can be used to provide feedback when there is a server response delay.
 
 This is a small package to help create a nice loading animation in the [Neos UI](http://github.com/neos/neos-ui).
 You can either use a version with or without a `CSS` file. (Depends on your build stack)
+
+## How it looks
+
+![Visualization of animation](https://github.com/user-attachments/assets/afecd1bf-d1de-4cb7-a1c7-813bd1ea2a5b)
+
+## How to install
+
+Based on your package manager run:
+
+```bash
+# npm
+npm install carbon-neos-loadinganimation --save-dev
+# pnpm
+pnpm add carbon-neos-loadinganimation -D
+# Yarn
+yarn add carbon-neos-loadinganimation --dev
+```
+
+## How to use
 
 ```js
 // Styled with inline styles
@@ -42,7 +59,15 @@ function Editor({ id, isLoading }) {
     setLoading(false);
   }, []);
 
-  return <LoadingAnimation id={id} isLoading={isLoading} delayTime={2000} timeoutTime={7000} heightMultiplier={2} />;
+  return (
+    <LoadingAnimation
+      id={id}
+      isLoading={isLoading}
+      delayTime={2000}
+      timeoutTime={7000}
+      heightMultiplier={2}
+    />;
+  )
 }
 ```
 
@@ -58,10 +83,10 @@ Every component receives following props:
 
 > `delayTime` and `timeoutTime` should be positive. `timeoutTime` is the time after `delayTime` is finished.
 
-## Visual state
+## How it works
 
 After a certain time when the `isLoading` is set to `true`, determined by `delayTime` and `timeoutTime`, the timers
-changes his state. If `isLoading` is false, nothing is displayed at all. The states are:
+changes his state. If `isLoading` is false, nothing is displayed at all.
 
 ```
                       ┌────────────────────┐
