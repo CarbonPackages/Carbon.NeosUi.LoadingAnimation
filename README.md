@@ -1,5 +1,7 @@
 # Carbon.NeosUi.LoadingAnimation
 
+https://github.com/user-attachments/assets/3af20265-5254-4a22-ba53-0e57dc24a36c
+
 It’s important that users understand that things are happening when they have to wait for something. This loading timer
 can be used to provide feedback when there is a server response delay.
 
@@ -24,13 +26,33 @@ import LoadingAnimation from "carbon-neos-loadinganimation/LoadingWithStyles";
 import LoadingAnimation from "carbon-neos-loadinganimation/LoadingWithClassNames";
 ```
 
+You can use the component inside react like this
+
+```jsx
+import React, { useState, useEffect } from "react";
+import LoadingAnimation from "carbon-neos-loadinganimation/LoadingWithStyles";
+
+function Editor({ id, isLoading }) {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true);
+    // Do your calls
+    // ...
+    setLoading(false);
+  }, []);
+
+  return <LoadingAnimation id={id} isLoading={isLoading} delayTime={2000} timeoutTime={7000} heightMultiplier={2} />;
+}
+```
+
 Every component receives following props:
 
 | Property name | Default value              | Description                                                          |
 | ------------- | -------------------------- | -------------------------------------------------------------------- |
 | `isLoading`   | `false`                    | The main property. True will start the animation process.            |
 | `delayTime`   | `500`                      | The main property. True will start the animation process.            |
-| `timeoutTime` | `500`                      | The main property. True will start the animation process.            |
+| `timeoutTime` | `5000`                     | The main property. True will start the animation process.            |
 | `id`          | `null`                     | The id of the container                                              |
 | `title`       | `'Neos.Neos:Main:loading'` | The title of the container. Will shown a tooltip. Will be translated |
 
