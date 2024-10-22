@@ -1,13 +1,20 @@
 {
   "name": "carbon-neos-loadinganimation",
-  "version": "0.1.0",
   "description": "Loading animation for Neos UI",
-  "main": "module.mjs",
-  "module": "module.mjs",
+  "main": "index.mjs",
+  "module": "index.mjs",
   "exports": {
     ".": {
-      "require": "./dist/module.cjs",
-      "import": "./dist/module.mjs"
+      "require": null,
+      "import": "./index.mjs"
+    },
+    "./LoadingWithClassNames": {
+      "require": null,
+      "import": "./LoadingWithClassNames.jsx"
+    },
+    "./LoadingWithStyles": {
+      "require": null,
+      "import": "./LoadingWithStyles.jsx"
     }
   },
   "files": [
@@ -17,10 +24,6 @@
     "Elements.jsx",
     "style.module.css"
   ],
-  "scripts": {
-    "build": "pnpm publish --access public --no-git-checks",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/CarbonPackages/Carbon.NeosUi.LoadingAnimation.git"
@@ -38,6 +41,6 @@
   },
   "homepage": "https://github.com/CarbonPackages/Carbon.NeosUi.LoadingAnimation#readme",
   "peerDependencies": {
-    "@neos-project/neos-ui-decorators": "^8.3.0 || ^9.0.0"
+    "@neos-project/neos-ui-extensibility": "^8.3.0 || ^9.0.0"
   }
 }
