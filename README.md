@@ -64,19 +64,39 @@ After a certain time when the `isLoading` is set to `true`, determined by `delay
 changes his state. If `isLoading` is false, nothing is displayed at all. The states are:
 
 ```
-┌───────────────────┐
-│       Idle        │
-└─────────┬─────────┘
-          │
-┌─────────▼─────────┐
-│  Empty container  │ after 0ms
-└─────────┬─────────┘
-          │
-┌─────────▼─────────┐
-│ Circle animation  │ after delayTime in ms
-└─────────┬─────────┘
-          │
-┌─────────▼─────────┐
-│  Dots animation   │ after timeoutTime in ms
-└───────────────────┘
+                      ┌────────────────────┐
+              ┌───────│     isLoading      │───────┐
+              │       └────────────────────┘       │
+
+            true                                 false
+
+              │                                    │
+              ▼                                    ▼
+┌───────────────────────────┐        ┌───────────────────────────┐
+│                           │        │       cancel timer        │
+│       reserve space       │        │             &             │
+│                           │        │        return null        │
+└───────────────────────────┘        └───────────────────────────┘
+              │
+
+    after delayTime in ms
+
+              │
+              ▼
+┌───────────────────────────┐
+│                           │
+│   show circle animation   │
+│                           │
+└───────────────────────────┘
+              │
+
+   after timeoutTime in ms
+
+              │
+              ▼
+┌───────────────────────────┐
+│                           │
+│    show dots animation    │
+│                           │
+└───────────────────────────┘
 ```
