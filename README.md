@@ -74,7 +74,7 @@ changes his state. If `isLoading` is false, nothing is displayed at all. The sta
               ▼                                    ▼
 ┌───────────────────────────┐        ┌───────────────────────────┐
 │                           │        │       cancel timer        │
-│       reserve space       │        │             &             │
+│       reserve space       │        │             +             │
 │                           │        │        return null        │
 └───────────────────────────┘        └───────────────────────────┘
               │
