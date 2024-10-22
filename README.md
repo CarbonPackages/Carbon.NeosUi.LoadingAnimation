@@ -51,12 +51,12 @@ Every component receives following props:
 | Property name | Default value              | Description                                                          |
 | ------------- | -------------------------- | -------------------------------------------------------------------- |
 | `isLoading`   | `false`                    | The main property. True will start the animation process.            |
-| `delayTime`   | `500`                      | The main property. True will start the animation process.            |
-| `timeoutTime` | `5000`                     | The main property. True will start the animation process.            |
+| `delayTime`   | `500`                      | The time in ms after the circle animations starts.                   |
+| `timeoutTime` | `5000`                     | The time in ms after the dots animations starts.                     |
 | `id`          | `null`                     | The id of the container                                              |
 | `title`       | `'Neos.Neos:Main:loading'` | The title of the container. Will shown a tooltip. Will be translated |
 
-> `delayTime` should be positive and always smaller than or equal to `timeoutTime`.
+> `delayTime` and `timeoutTime` should be positive. `timeoutTime` is the time after `delayTime` is finished.
 
 ## Visual state
 
