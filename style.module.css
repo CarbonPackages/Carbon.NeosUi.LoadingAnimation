@@ -1,0 +1,26 @@
+.container {
+  display: grid;
+  grid-template: "content" 1fr / 1fr;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  min-height: calc(var(--spacing-GoldenUnit) * var(--height-multiplier, 1));
+}
+
+.inactive,
+.active {
+  grid-area: content;
+  transition:
+    opacity var(--transition-Default),
+    transform var(--transition-Default) ease;
+}
+
+.inactive {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.active {
+  opacity: 1;
+  transform: scale(1);
+}

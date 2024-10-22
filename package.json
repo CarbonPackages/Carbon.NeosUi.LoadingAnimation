@@ -1,0 +1,43 @@
+{
+  "name": "carbon-neos-loadinganimation",
+  "version": "0.1.0",
+  "description": "Loading animation for Neos UI",
+  "main": "module.mjs",
+  "module": "module.mjs",
+  "exports": {
+    ".": {
+      "require": "./dist/module.cjs",
+      "import": "./dist/module.mjs"
+    }
+  },
+  "files": [
+    "index.mjs",
+    "LoadingWithClassNames.jsx",
+    "LoadingWithStyles.jsx",
+    "Elements.jsx",
+    "style.module.css"
+  ],
+  "scripts": {
+    "build": "pnpm publish --access public --no-git-checks",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/CarbonPackages/Carbon.NeosUi.LoadingAnimation.git"
+  },
+  "keywords": [
+    "neos",
+    "animation",
+    "JavaScript",
+    "React"
+  ],
+  "author": "Jon Uhlmann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CarbonPackages/Carbon.NeosUi.LoadingAnimation/issues"
+  },
+  "homepage": "https://github.com/CarbonPackages/Carbon.NeosUi.LoadingAnimation#readme",
+  "peerDependencies": {
+    "@neos-project/neos-ui-decorators": "^8.3.0 || ^9.0.0"
+  }
+}
