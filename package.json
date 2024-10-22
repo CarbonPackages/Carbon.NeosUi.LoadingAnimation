@@ -1,28 +1,24 @@
 {
   "name": "carbon-neos-loadinganimation",
   "description": "Loading animation for Neos UI",
-  "main": "index.mjs",
-  "module": "index.mjs",
+  "main": "src/index.mjs",
+  "module": "src/index.mjs",
   "exports": {
     ".": {
       "require": null,
-      "import": "./index.mjs"
+      "import": "./src/index.mjs"
     },
     "./LoadingWithClassNames": {
       "require": null,
-      "import": "./LoadingWithClassNames.jsx"
+      "import": "./src/LoadingWithClassNames.jsx"
     },
     "./LoadingWithStyles": {
       "require": null,
-      "import": "./LoadingWithStyles.jsx"
+      "import": "./src/LoadingWithStyles.jsx"
     }
   },
   "files": [
-    "index.mjs",
-    "LoadingWithClassNames.jsx",
-    "LoadingWithStyles.jsx",
-    "Elements.jsx",
-    "style.module.css"
+    "src"
   ],
   "repository": {
     "type": "git",
