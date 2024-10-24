@@ -4,7 +4,8 @@ It’s important that users understand that things are happening when they have 
 can be used to provide feedback when there is a server response delay.
 
 This is a small package to help create a nice loading animation in the [Neos UI](http://github.com/neos/neos-ui).
-You can either use a version with or without a `CSS` file. (Depends on your build stack)
+There are three variants of the loading animation: One with a CSS file, one with [StyleX](https://stylexjs.com),
+and one with pure inline style attributes. Use the one that best suits your stack.
 
 ## How it looks
 
@@ -31,6 +32,9 @@ import { LoadingWithStyles } from "carbon-neos-loadinganimation";
 
 // Styled with css classes
 import { LoadingWithClassNames } from "carbon-neos-loadinganimation";
+
+// Styled with styleX classes
+import { LoadingWithStyleX } from "carbon-neos-loadinganimation";
 ```
 
 You can also directly import the loader:
@@ -41,6 +45,9 @@ import LoadingAnimation from "carbon-neos-loadinganimation/LoadingWithStyles";
 
 // Styled with css classes
 import LoadingAnimation from "carbon-neos-loadinganimation/LoadingWithClassNames";
+
+// Styled with styleX classes
+import LoadingAnimation from "carbon-neos-loadinganimation/LoadingWithStyleX";
 ```
 
 You can use the component inside react like this
