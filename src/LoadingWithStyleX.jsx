@@ -55,9 +55,9 @@ function Loading({
     }
 
     return (
-        <div id={id} title={translatedTitle} {...stylex.props(style.container(heightMultiplier))}>
-            <Circle {...stylex.props(style.item(showLoading == 1))} />
-            <Dots {...stylex.props(style.item(showLoading == 2))} />
+        <div id={id} title={translatedTitle} {...stylex.props(styles.container(heightMultiplier))}>
+            <Circle {...stylex.props(styles.item(showLoading == 1))} />
+            <Dots {...stylex.props(styles.item(showLoading == 2))} />
         </div>
     );
 }
