@@ -1,5 +1,3 @@
-import LoadingWithClassNames from './LoadingWithClassNames';
-import LoadingWithStyles from './LoadingWithStyles';
-import LoadingWithStyleX from './LoadingWithStyleX';
-
-export { LoadingWithClassNames, LoadingWithStyles, LoadingWithStyleX };
+export { LoadingWithClassNames } from './LoadingWithClassNames';
+export { LoadingWithStyles } from './LoadingWithStyles';
+export { LoadingWithStyleX } from './LoadingWithStyleX';
