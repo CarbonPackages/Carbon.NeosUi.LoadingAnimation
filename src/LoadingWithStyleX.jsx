@@ -28,6 +28,7 @@ function Loading({
     timeoutTime = 5000,
     i18nRegistry,
     heightMultiplier = 1,
+    width = 60,
 }) {
     const [showLoading, setShowLoading] = useState(0);
     const translatedTitle = title ? i18nRegistry.translate(title) : null;
@@ -56,8 +57,8 @@ function Loading({
 
     return (
         <div id={id} title={translatedTitle} {...stylex.props(styles.container(heightMultiplier))}>
-            <Circle {...stylex.props(styles.item(showLoading == 1))} />
-            <Dots {...stylex.props(styles.item(showLoading == 2))} />
+            <Circle size={width / 2} {...stylex.props(styles.item(showLoading == 1))} />
+            <Dots size={width / 2} {...stylex.props(styles.item(showLoading == 2))} />
         </div>
     );
 }

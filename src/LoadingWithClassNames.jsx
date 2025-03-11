@@ -11,6 +11,7 @@ function Loading({
     timeoutTime = 5000,
     i18nRegistry,
     heightMultiplier = 1,
+    width = 60,
 }) {
     const [showLoading, setShowLoading] = useState(0);
     const translatedTitle = title ? i18nRegistry.translate(title) : null;
@@ -44,8 +45,8 @@ function Loading({
             className={style.container}
             title={translatedTitle}
         >
-            <Circle className={showLoading == 1 ? style.active : style.inactive} />
-            <Dots className={showLoading == 2 ? style.active : style.inactive} />
+            <Circle size={width / 2} className={showLoading == 1 ? style.active : style.inactive} />
+            <Dots size={width / 2} className={showLoading == 2 ? style.active : style.inactive} />
         </div>
     );
 }
